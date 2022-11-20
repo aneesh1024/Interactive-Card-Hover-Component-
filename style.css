@@ -1,0 +1,223 @@
+* {
+  font-family: "Xanh Mono", monospace;
+}
+
+body {
+  background: linear-gradient(135deg, #5e5e5e, black, #1e2e2e);
+  height: 100vh;
+  background-size: 400% 400%;
+  overflow: hidden;
+  animation: gradient infinite ease 20s;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-swiper {
+  width: 20 rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.card-groups {
+  transition: 400ms;
+  width: 14rem;
+  aspect-ratio: 5/7;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-group {
+  transform-origin: 500ms;
+  position: absolute;
+  width: 14rem;
+  aspect-ratio: 5/7;
+  margin: 20vh auto;
+}
+
+.hidden {
+  scale: 0;
+}
+
+.card {
+  aspect-ratio: 5/7;
+  border-radius: 20px;
+  position: absolute;
+  transition: 400ms ease-out;
+}
+
+.big-card {
+  background: rgb(133, 133, 133);
+  width: 14rem;
+  background-size: cover;
+}
+
+.small-card {
+  background: #5e5e5e;
+  width: 5rem;
+  background-size: cover;
+}
+
+.card-group1 .big-card:nth-child(1) {
+  background-image: url("https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=392&q=80");
+  transform: rotate(4deg) translate(3%);
+  z-index: 4;
+}
+.card-group1 .big-card:nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  transform: rotate(-2deg) translate(-1%);
+  z-index: 3;
+}
+.card-group1 .big-card:nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  transform: rotate(-6deg) translate(-5%);
+  z-index: 2;
+}
+.card-group1 .big-card:nth-child(4) {
+  background-image: url("https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  transform: rotate(-9deg) translate(-8%);
+  z-index: 1;
+}
+
+.card-group2 .big-card:nth-child(1) {
+  background-image: url("https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80");
+}
+
+.card-group2 .big-card:nth-child(2) {
+  background-image: url("https://plus.unsplash.com/premium_photo-1668208365386-4198381c6f6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.card-group2 .big-card:nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1607274134639-043342705e6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80");
+}
+
+.card-group2 .big-card:nth-child(4) {
+  background-image: url("https://images.unsplash.com/photo-1590420485404-f86d22b8abf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.card-group3 .big-card:nth-child(1) {
+  background-image: url("https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.card-group3 .big-card:nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+}
+
+.card-group3 .big-card:nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.card-group3 .big-card:nth-child(4) {
+  background-image: url("https://plus.unsplash.com/premium_photo-1663047373614-1ca1b13b7334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.card-group .big-card:nth-child(1) {
+  z-index: 4;
+}
+
+.card-group .big-card:nth-child(2) {
+  z-index: 3;
+}
+
+.card-group .big-card:nth-child(3) {
+  z-index: 2;
+}
+
+.card-group .big-card:nth-child(4) {
+  z-index: 1;
+}
+
+.small-card:nth-child(5) {
+  background-image: url("https://images.unsplash.com/photo-1600239448128-917653c5bf77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.small-card:nth-child(6) {
+  background-image: url("https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80");
+}
+.small-card:nth-child(7) {
+  background-image: url("https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+.small-card:nth-child(8) {
+  background-image: url("https://images.unsplash.com/photo-1553530666-ba11a7da3888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80");
+}
+
+.card-group:hover .big-card:nth-child(1) {
+  transform: translateX(60%) rotateZ(20deg);
+  z-index: 4;
+}
+.card-group:hover .big-card:nth-child(2) {
+  transform: translate(20%) rotate(5deg);
+  z-index: 3;
+}
+.card-group:hover .big-card:nth-child(3) {
+  transform: translateX(-20%) rotateZ(-10deg);
+  z-index: 2;
+}
+.card-group:hover .big-card:nth-child(4) {
+  transform: translateX(-50%) rotateZ(-30deg);
+  z-index: 1;
+}
+
+.small-card {
+  z-index: 2;
+  left: 30%;
+  top: 30%;
+}
+
+.card-group:hover .small-card:nth-child(5) {
+  transform: translate(-11rem, -11rem) rotate(10deg);
+}
+.card-group:hover .small-card:nth-child(6) {
+  transform: translate(11rem, -11rem) rotate(-20deg);
+}
+.card-group:hover .small-card:nth-child(7) {
+  transform: translate(-11rem, 11rem) rotate(-10deg);
+}
+.card-group:hover .small-card:nth-child(8) {
+  transform: translate(12rem, 13rem) rotate(20deg);
+}
+
+.prev svg,
+.next svg {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 7px;
+  scale: 0.8;
+  color: white;
+  aspect-ratio: 1/1;
+  transition: 400m s;
+}
+
+.prev:hover svg,
+.next:hover svg {
+  color: aqua;
+  border-color: aqua;
+}
+
+.btn-group {
+  display: flex;
+  gap: 3rem;
+}
+
+.transition-in {
+  transition: 600ms;
+  scale: 1;
+}
+.transition-out {
+  transition: 600ms;
+  scale: 0;
+}
